@@ -272,9 +272,74 @@
 
 /* START TEACH TO OTHERS */
 
+.grid-container {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+  }
 
+  .grid-item{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 5%;
+    text-align: left;
+  }
+
+  @media only screen and (max-width: 600px) {
+    /* Apply styles for screens smaller than 600px */
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  }
 
 /* FINISH TEACH TO OTHERS */
+
+
+
+
+
+
+/* STARTS FLASHCARDS */
+
+.flashcardsButtonsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flashcardsButtonBoxes{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flashcardsDecksContainer{
+    background-color: blue;
+    width: 100%;
+}
+
+.flashcardsColumnsTitlesBox{
+    background-color: lightblue;
+    font-weight: bold;
+}
+
+.flashcardsColumnsTitles{
+    color: white;
+}
+
+
+.flashcardsButtonsContainer2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
+    margin-bottom: 5%;
+}
+
+/* FINISH FLASHCARDS */
+
+
+
+
 
 
 /*      AI STARTS      */
