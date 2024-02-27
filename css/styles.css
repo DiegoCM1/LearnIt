@@ -1,0 +1,297 @@
+/*Variables START*/
+/*Variables FINISHES*/
+/*Mixinx STARTS*/
+/*Mixinx STARTS*/
+/*Body*/
+.body-bg {
+  background-color: rgb(158, 239, 243);
+}
+@media only screen and (max-width: 500px), only screen and (min-width: 501px) and (max-width: 960px), only screen and (min-width: 961px) {
+  .body-bg {
+    background-color: rgb(158, 239, 243);
+  }
+}
+
+/*Body/*
+
+
+/* HEADER */
+.header, .headerMenuContainer {
+  background-color: rgb(22, 145, 167);
+}
+
+.headerMenuContainer {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.headerMenuNav {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+
+.headerMenuLogoBox {
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerMenuLogoImage {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+}
+
+.headerMenuOptionsBox {
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerMenuImages {
+  display: flex;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin: 1%;
+}
+
+.headerBootstrap {
+  margin-bottom: 1%;
+}
+
+.nav-item :hover {
+  background-color: rgb(61, 61, 141);
+}
+
+/*HEADER*/
+/*     MAIN STARTS       */
+.title-h1 {
+  text-align: center;
+  background-color: rgb(64, 64, 149);
+  margin-top: 0;
+  color: white;
+  height: 7vh;
+}
+
+.main-H2 {
+  text-align: center;
+  background-color: rgb(64, 64, 149);
+}
+
+.main-Iframes {
+  width: 900px;
+  height: 500px;
+  display: block;
+  margin: auto;
+}
+
+.main-P {
+  text-align: center;
+  height: 5vh;
+}
+
+/*    Index STARTS       */
+.container-menu-options {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 50vh;
+  justify-content: space-evenly;
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
+.container-menu-options .menu-options {
+  width: 20%;
+  height: 40vh;
+}
+.container-menu-options .menu-options:hover {
+  background-color: rgb(136, 202, 205);
+}
+.container-menu-options .mainMenuImages {
+  width: 100%;
+  height: 100%;
+  border: solid black 5px;
+}
+@media (max-width: 600px) {
+  .container-menu-options .menu-options {
+    width: 40vw;
+    height: 25vh;
+    margin: 1vh;
+  }
+}
+
+/*    Index FINISHES    */
+/*POMODORO STARTS*/
+.newPomodoroImgBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newPomodoroImg {
+  height: 100%;
+  width: 100%;
+}
+
+.newPomodoroButtons {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5vh;
+}
+
+@media (max-width: 500px) {
+  .newPomodoroImg {
+    height: 80%;
+    width: 80%;
+  }
+}
+/*POMODORO FINISHES*/
+/* START TEACH TO OTHERS */
+.gridAreaContainer {
+  display: grid;
+  justify-content: center;
+  row-gap: 1vh;
+  grid-template-areas: "img1 description1" "img2 description2" "img3 description3";
+}
+.gridAreaContainer .imgbox, .gridAreaContainer .img3box, .gridAreaContainer .img2box, .gridAreaContainer .img1box {
+  display: flex;
+  width: 30vw;
+  height: 29vh;
+  align-items: center;
+  justify-content: center;
+}
+.gridAreaContainer .img1box {
+  grid-area: img1;
+}
+.gridAreaContainer .img2box {
+  grid-area: img2;
+}
+.gridAreaContainer .img3box {
+  grid-area: img3;
+}
+.gridAreaContainer .description, .gridAreaContainer .description3, .gridAreaContainer .description2, .gridAreaContainer .description1 {
+  border-left: none;
+  width: 63vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.gridAreaContainer .description1 {
+  grid-area: description1;
+}
+.gridAreaContainer .description2 {
+  grid-area: description2;
+}
+.gridAreaContainer .description3 {
+  grid-area: description3;
+}
+.gridAreaContainer .sizeOfImgs {
+  width: 70%;
+  height: 70%;
+}
+
+/* FINISH TEACH TO OTHERS */
+/* STARTS FLASHCARDS */
+.flashcardsButtonsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flashcardsButtonBoxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flashcardsDecksContainer {
+  background-color: blue;
+  width: 100%;
+}
+
+.flashcardsColumnsTitlesBox {
+  background-color: lightblue;
+  font-weight: bold;
+}
+
+.flashcardsColumnsTitles {
+  color: white;
+}
+
+.flashcardsButtonsContainer2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30%;
+}
+
+/* FINISH FLASHCARDS */
+/*      Artifial Intelligence STARTS      */
+.chat-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.chat-container .chat-box {
+  height: 72vh;
+}
+
+/*      Artificial Intelligence FINSIHES      */
+/*      Settings STARTS                       */
+/*      Settings  FINISHES                      */
+.imagesOfTheBox {
+  border: solid black;
+  width: 10%;
+  height: 100%;
+}
+
+/*END OF THE MAIN*/
+/*FOOTER*/
+.footer {
+  background-color: rgb(22, 145, 167);
+  height: 30vh;
+}
+.footer .footerTitle {
+  background-color: rgb(64, 64, 149);
+  color: white;
+}
+.footer .footerImagesLogoContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 120px;
+  text-align: left;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0%;
+}
+.footer .footerImagesLogoContainer .footerBoxLogo {
+  flex-basis: 79.5%;
+  text-align: right;
+}
+.footer .footerImagesLogoContainer .footerBoxLogo .footer-Logo-Img {
+  width: 50px;
+  height: 50px;
+}
+.footer .footerImagesLogoContainer .footerBoxesSocialMediaImages {
+  width: 60px;
+  height: 60px;
+  margin-top: 0%;
+  margin-left: 1%;
+}
+.footer .footerImagesLogoContainer .footerBoxesSocialMediaImages .footerSocialMediaImages {
+  width: 100%;
+  height: 100%;
+}
+
+/*END OF THE FOOTER*//*# sourceMappingURL=styles.css.map */
