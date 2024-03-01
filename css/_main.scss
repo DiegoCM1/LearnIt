@@ -1,0 +1,245 @@
+  /*     MAIN STARTS       */
+  
+  .title-h1 {
+    text-align: center;
+    background-color:  $bg-titles-color;
+    margin-top: 0;
+    color: white;
+    font-size: 7vh;
+  }
+  
+  .title-H2 {
+    text-align: center;
+    background-color:  $bg-titles-color;
+    color: white;
+  }
+  
+  .main-Iframes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+    width: 90vw;
+  }
+  
+  .main-P {
+    text-align: center;
+    height: 5vh;
+  }
+  
+  /*    Index STARTS       */
+  
+  .container-menu-options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 70vh;
+    justify-content: space-evenly;
+    margin-top: 1%;
+    margin-bottom: 3%;
+
+    .menu-options {
+      width: 20%;
+      height: 60vh;  
+      &:hover {
+        background-color: rgb(170, 183, 184);
+      }
+    }
+
+    .mainMenuImages{
+      @include imgs();
+      border: solid black 5px;
+    }
+  
+    @media (max-width: 600px) {
+      .menu-options {
+        width: 40vw;
+        height: 25vh;
+        margin: 1vh;
+      }
+    }
+  }
+  
+  /*    Index FINISHES    */
+  
+  /*POMODORO STARTS*/
+  
+  .newPomodoroImgBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .newPomodoroImg {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .newPomodoroButtons {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5vh;
+  }
+
+  @media(max-width: 500px){
+    .newPomodoroImg {
+        height: 80%;
+        width: 80%;
+      }
+  }
+  
+  /*POMODORO FINISHES*/
+  
+  
+  
+  /* START TEACH TO OTHERS */
+  
+  .gridAreaContainer {
+    display: grid;
+    justify-content: center;
+    row-gap: 1vh;
+    grid-template-areas:
+      'img1 description1'
+      'img2 description2'
+      'img3 description3';
+
+
+      .imgbox{
+        display: flex;
+        width: 30vw;
+        height: 29vh;
+        align-items: center;
+        justify-content: center;
+      }
+
+    .img1box{
+      @extend .imgbox;
+      grid-area: img1 ;
+    }
+
+    .img2box{
+      @extend .imgbox;
+      grid-area: img2 ;
+      }
+
+      .img3box{
+        @extend .imgbox;
+        grid-area: img3;
+      }
+
+      .description {
+        border-left: none;
+        width: 63vw;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+    .description1 {
+      @extend .description;
+      grid-area: description1;
+    }
+
+    .description2 {
+      @extend .description;
+      grid-area: description2;
+      }
+  
+      
+      .description3 {
+        @extend .description;
+        grid-area: description3;
+      }
+    
+  
+    .sizeOfImgs {
+      width: 70%;
+      height: 70%;
+    }
+  }
+  
+  /* FINISH TEACH TO OTHERS */
+  
+  
+  
+  
+  
+  
+  /* STARTS FLASHCARDS */
+  
+  .flashcardsButtonsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flashcardsButtonBoxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flashcardsDecksContainer {
+    background-color: blue;
+    width: 100%;
+  }
+  
+  .flashcardsColumnsTitlesBox {
+    background-color: lightblue;
+    font-weight: bold;
+  }
+  
+  .flashcardsColumnsTitles {
+    color: white;
+  }
+  
+  .flashcardsButtonsContainer2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
+  }
+  
+  /* FINISH FLASHCARDS */
+  
+  
+  
+  
+  
+  
+  /*      Artifial Intelligence STARTS      */
+  
+  .chat-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  
+    .chat-box {
+      height: 72vh;
+    }
+  }
+  
+  /*      Artificial Intelligence FINSIHES      */
+  
+  
+  
+  /*      Settings STARTS                       */
+  
+  /*      Settings  FINISHES                      */
+
+
+
+  /*      Contact STARTS                       */
+  
+
+  /*      Contact  FINISHES                      */
+  
+  
+  .imagesOfTheBox {
+    border: solid black;
+    width: 10%;
+    height: 100%;
+  }
+  
+  /*END OF THE MAIN*/

@@ -2,20 +2,53 @@
 /*Variables FINISHES*/
 /*Mixinx STARTS*/
 /*Mixinx STARTS*/
-/*Body*/
-.body-bg {
-  background-color: rgb(158, 239, 243);
-}
-@media only screen and (max-width: 500px), only screen and (min-width: 501px) and (max-width: 960px), only screen and (min-width: 961px) {
-  .body-bg {
-    background-color: rgb(158, 239, 243);
-  }
-}
-
-/*Body/*
-
-
 /* HEADER */
+/*Header INDEX STARTS */
+.header-index {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  background-color: rgb(64, 64, 149);
+  color: white;
+}
+
+.box-title {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 80vw;
+  padding-left: 20%;
+}
+
+.box-options {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 20vw;
+}
+
+.box-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  width: 10vw;
+}
+
+.options-imgs {
+  display: flex;
+  justify-content: center;
+  width: 5vw;
+  height: 5vh;
+}
+
+.box-option :hover {
+  background-color: rgb(53, 53, 124);
+}
+
+/*Header INDEX FINISHES */
 .header, .headerMenuContainer {
   background-color: rgb(22, 145, 167);
 }
@@ -79,19 +112,21 @@
   background-color: rgb(64, 64, 149);
   margin-top: 0;
   color: white;
-  height: 7vh;
+  font-size: 7vh;
 }
 
-.main-H2 {
+.title-H2 {
   text-align: center;
   background-color: rgb(64, 64, 149);
+  color: white;
 }
 
 .main-Iframes {
-  width: 900px;
-  height: 500px;
-  display: block;
-  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+  width: 90vw;
 }
 
 .main-P {
@@ -105,17 +140,17 @@
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
-  height: 50vh;
+  height: 70vh;
   justify-content: space-evenly;
   margin-top: 1%;
   margin-bottom: 3%;
 }
 .container-menu-options .menu-options {
   width: 20%;
-  height: 40vh;
+  height: 60vh;
 }
 .container-menu-options .menu-options:hover {
-  background-color: rgb(136, 202, 205);
+  background-color: rgb(170, 183, 184);
 }
 .container-menu-options .mainMenuImages {
   width: 100%;
@@ -232,7 +267,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30%;
+  margin-top: 20%;
 }
 
 /* FINISH FLASHCARDS */
@@ -249,6 +284,8 @@
 /*      Artificial Intelligence FINSIHES      */
 /*      Settings STARTS                       */
 /*      Settings  FINISHES                      */
+/*      Contact STARTS                       */
+/*      Contact  FINISHES                      */
 .imagesOfTheBox {
   border: solid black;
   width: 10%;
@@ -294,4 +331,15 @@
   height: 100%;
 }
 
-/*END OF THE FOOTER*//*# sourceMappingURL=styles.css.map */
+/*END OF THE FOOTER*/
+/*Body*/
+.body-bg {
+  background-color: rgb(158, 239, 243);
+}
+@media only screen and (max-width: 500px), only screen and (min-width: 501px) and (max-width: 960px), only screen and (min-width: 961px) {
+  .body-bg {
+    background-color: rgb(158, 239, 243);
+  }
+}
+
+/*Body*//*# sourceMappingURL=styles.css.map */
