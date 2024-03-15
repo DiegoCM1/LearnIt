@@ -8,8 +8,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Flashcards</title>
+    <meta name="description" content="Revolutionize your study sessions with our cutting-edge web app. Memorize and learn effectively using interactive flashcards. Explore the benefits of active recall, personalized learning, and accelerated knowledge retention. Join now for a smarter, more efficient approach to mastering your subjects.">
+    <meta name="keywords" content="Flashcard app, memorization tool, study aid, interactive learning, active recall, personalized learning, knowledge retention, efficient studying, educational technology">
+    <title>LearnIt - Flashcards: Enhance Learning with Flashcards on Our Powerful Web App</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 
@@ -30,7 +33,7 @@
                 <a class="nav-link" href="../pages/pomodoro.html">Pomodoro</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../pages/teachToOthers.html">Learn Teaching</a>
+                <a class="nav-link" href="../pages/learnTeaching.html">Learn Teaching</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="../pages/flashcards.html">Flashcards</a>
@@ -51,8 +54,10 @@
     </header>
 
   <main>
-
-        <div class="flashcardsButtonsContainer">
+    <h1 class="title-h1 animate__animated animate__rubberBand">
+      Flashcards
+    </h1>
+        <div class=" flashcardsButtonsContainer animate__animated animate__bounceInDown">
             <div class="btn-group" role="group" aria-label="Basic example">
               <button type="button" class="btn btn-primary">Decks</button>
               <button type="button" class="btn btn-primary">Add</button>
@@ -62,7 +67,7 @@
             </div>
         </div>
 
-        <div class="container mt-5 flashcardsDecksContainer">
+        <div class="container mt-5 flashcardsDecksContainer animate__animated animate__bounceInLeft">
             <div class="row flashcardsColumnsTitlesBox">
               <div class="col flashcardsColumnsTitles">Deck</div>
               <div class="col flashcardsColumnsTitles">New</div>
@@ -89,7 +94,7 @@
             </div>
         </div>
 
-            <div class="flashcardsButtonsContainer2">
+            <div class="flashcardsButtonsContainer2 animate__animated animate__bounceInUp">
                 <div class="btn-group" role="group" aria-label="Basic example">
                   <button type="button" class="btn btn-primary">Get Shared</button>
                   <button type="button" class="btn btn-primary">Create deck</button>
@@ -97,6 +102,16 @@
                 </div>
             </div>
     </main>
+
+    <footer class="footer1">
+      <div>
+        <span>
+          <p class="adaptativeText">
+              &copy;2023 LearnIt. All rights reserved.
+          </p>
+        </span>
+      </div>
+  </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   

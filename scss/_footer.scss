@@ -42,5 +42,24 @@
       }
     }
   }
+
+
+.fixedPostion{
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+}
+
+  //New footer
+  .footer1 {
+    background-color: $header-footer-color;
+    color: white;
+    padding: 2vh;
+    text-align: center;
+    width: 100vw;
+    height: 10vh;    
+  }
+
+  //New footer ends
   
   /*END OF THE FOOTER*/

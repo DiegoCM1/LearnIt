@@ -6,9 +6,8 @@
   display: flex;
   align-items:center;
   justify-content: center;
-  height: 10vh;
+  height: 12vh;
   background-color: $bg-titles-color;
-  color: white;
 }
 
 .box-title{
@@ -38,18 +37,35 @@
 .options-imgs{
   display: flex;
   justify-content: center;
-  width: 5vw;
+  width: 4.5vw;
   height: 5vh;
+  transform:skew(25deg);
+  animation: rotation-efect 3s linear infinite;
+  &:hover {
+    width: 5vw;
+    height: 6vh;  
+    transition: height 0.5s, width 0.5s;
+  } 
 }
 
-.box-option :hover{
-  background-color: rgb(53, 53, 124);
+.options-imgs1{
+  display: flex;
+  justify-content: center;
+  width: 5vw;
+  height: 5vh;
+  transform:skew(25deg);
+  &:hover {
+    width: 6vw;
+    height: 6vh;  
+    transition: height 0.5s, width 0.5s;
+  } 
 }
+
 /*Header INDEX FINISHES */
 
   
 .header {
-    background-color: $header-footer-color;
+  background-color: $header-footer-color;
   }
   
   .headerMenuContainer {
@@ -102,7 +118,7 @@
   }
   
   .nav-item :hover {
-    background-color: rgb(61, 61, 141);
+    background-color: rgb(40, 119, 164);
   }
   
   /*HEADER*/
