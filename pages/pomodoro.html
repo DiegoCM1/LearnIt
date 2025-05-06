@@ -4,143 +4,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <meta name="description" content="Unlock the power of the Pomodoro technique with our specialized tool. Enhance your productivity and focus through structured work and break cycles. Improve concentration, manage time effectively, and experience heightened efficiency in your daily tasks. Transform your routine with the Pomodoro technique and make the most of every minute with our intuitive and user-friendly tool!">
+    <meta name="keywords" content="Pomodoro technique, productivity tool, time management, focus, work cycles, break cycles">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-    <title>Pomodoro System</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <title>LearnIt - Pomodoro System - Boost Your Productivity with the Pomodoro Technique</title>
 </head>
 
 
 
-<body class="bodyBackground">
+<body class="body-bg">
 
-
-    <header class="headerMenuContainer">
-        <nav class="headerMenuNav">
-            <div class="headerMenuLogoBox">
-                <a href="../index.html">
-                    <img src="../img/pencilLogo.png" alt="Pencil" class="headerMenuLogoImage" />
-                </a>
-            </div>
-
-            <div class="headerMenuOptionsBox">
-                <a href="../pages/pomodoro.html">
-                    <img src="../img/mainMenuPomodoro.png" alt="Pomodoro image" class="headerMenuImages">
-                </a>
-            </div>
-
-            <div class="headerMenuOptionsBox">
-                <a href="../pages/teachToOthers.html">
-                    <img src="../img/mainMenuTeacher.png" alt="Professor" class="headerMenuImages">
-                </a>
-            </div>
-
-            <div class="headerMenuOptionsBox">
-                <a href="../pages/flashcards.html">
-                    <img src="../img/mainMenuFlashcards.png" alt="Flashcards" class="headerMenuImages">
-                </a>
-            </div>
-
-            <div class="headerMenuOptionsBox">
-                <a href="../pages/artificialIntelligence.html">
-                    <img src="../img/mainMenuAi.png" alt="AI" class="headerMenuImages">
-                </a>
-            </div>
-        </nav>
+    <header class="headerBootstrap">
+      <nav class="navbar navbar-expand-lg header">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">LearnIt</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/pomodoro.html">Pomodoro</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/learnTeaching.html">Learn Teaching</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/flashcards.html">Flashcards</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/artificialIntelligence.html">AI</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/settings.html">Settings</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
 
 
     <main>
 
+      <h1 class="title-h1 animate__animated animate__rubberBand">
+        Pomodoro
+      </h1>
 
-        
-            <h1 class="main-H1">Pomodoro System</h1>
-
-        <section class="mainPomodoroTemporizatorContainer">
-            <div class="mainPomodoroTemporizator">
-
-                <section class="mainPomodoroRepresentationContainer">
-                    <div class="mainPomodoroRepresentationBox">
-                        <img src="../img/pomodoroSystem.png" alt="Pencil" class="mainPomodoroRepresentationImage">
+        <div class="container mt-2">
+            <div class="row justify-content-center">
+              <div class="col-md-12">
+                <div class="text-center">
+                  <div class="card-body">
+                    <div class="newPomodoroImgBox">
+                        <img src="../img/pomodoroSystem.webp" alt="Red pomodoro cronometer" class="animate__animated animate__backInDown newPomodoroImg">
                     </div>
-                </section>
-
-
-                <section class="mainPomodoroButtonsContainer">
-                    <div class="mainPomodoroButtons">
-                        <div class="mainPomodoroButton1Box">
-                            <button class="mainPomodoroButton1">
-                                Break/Work mode
-                            </button>
-                        </div>
-        
-                        <div class="mainPomodoroButton2Box">
-                            <button class="mainPomodoroButton2">
-                                Play/Pause
-                            </button>
-                        </div>
-        
-                        <div class="mainPomodoroButton3Box">
-                            <button class="mainPomodoroButton3">
-                                Finish
-                            </button>
-                        </div> 
-                    </section>
+                    <div class="display-4 animate__animated animate__shakeY" id="timer">25:00</div>
+                    <div class="newPomodoroButtons">
+                        <button class="btn btn-success animate__animated animate__backInDown" onclick="startTimer()">Start</button>
+                        <button class="btn btn-success animate__animated animate__backInUp">Break</button>
+                        <button class="btn btn-success animate__animated animate__backInDown" onclick="stopTimer()">Stop</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
-
-        <br>
+          </div>
 
     </main>
 
-
-    <footer class="footer">
-
-        <div class="footerTitle">
-            <h3>Social Media</h3>
-        </div>
-
-        <section class="footerImagesLogoContainer">
-            <div class="footerBoxesSocialMediaImages">
-                <a href="https://www.facebook.com/" target="_blank">
-                    <img src="../img/footerSocialMediaFacebook.png" alt="Facebook link"
-                        class="footerSocialMediaImages" />
-                </a>
-            </div>
-
-            <div class="footerBoxesSocialMediaImages">
-                <a href="https://twitter.com/" target="_blank">
-                    <img src="../img/footerSocialMediaX.png" alt="X link" class="footerSocialMediaImages" />
-                </a>
-            </div>
-
-            <div class="footerBoxesSocialMediaImages">
-                <a href="https://www.linkedin.com/" target="_blank">
-                    <img src="../img/footerSocialMediaLinkedIn.png" alt="LinkedIn Link" class="footerSocialMediaImages" />
-                </a>
-            </div>
-
-            <div class="footerBoxesSocialMediaImages">
-                <a href="https://instagram.com" target="_blank">
-                    <img src="../img/footerSocialMediaInstagram.png" alt="Instagram link"
-                        class="footerSocialMediaImages" />
-                </a>
-            </div>
-
-            <div class="footerBoxLogo">
-                <a href="../index.html">
-                    <img src="../img/pencilLogo.png" alt="Pencil" class="footer-Logo-Img" />
-                </a>
-            </div>
-        </section>
-
+    <footer class="footer1">
+      <div>
+        <span>
+          <p class="adaptativeText">
+            &copy;2023 LearnIt. All rights reserved.
+          </p>
+        </span>
+      </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
 
 </body>
