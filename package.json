@@ -1,0 +1,16 @@
+{
+  "name": "learnit",
+  "version": "1.0.0",
+  "description": "Learnit\r Learnit is an educative web app based on scientific evidence about the best learning techniques.\r Learnit has the purpose of making the study time more effective for any student, no matter the income, social status or even the field they are working/studying, everybody is gonna learn faster and efficiently using this web app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass scss/styles.scss css/styles.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.87.0"
+  }
+}
