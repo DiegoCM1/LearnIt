@@ -45,40 +45,64 @@
     <main class="mainBottomMargin">
 
       <div class="container-learnTeaching" id="learnTeachingMainOptions">
+        <!-- AI Review Option -->
         <div class="equalSizeContainer">
           <div class="optionContainer animate__animated animate__backInLeft">
             <div class="imageContainer">
-              <img src="../img/teachToOthersImg1.webp" alt="..." class="imageSize">
+              <img src="../img/teachToOthersImg1.webp" alt="AI reviewing content" class="imageSize">
             </div>
-              <div class="textContainer">
-                  <h2 class="adaptativeTitleH2">Get reviewed by an AI</h2>
-                  <p class="adaptativeText">Share your notes with the AI, correct errors and make sure it gets more clear for you.</p>
-              </div>
+            <div class="textContainer">
+              <h2 class="adaptativeTitleH2">Get reviewed by an AI</h2>
+              <p class="adaptativeText">Share your notes with the AI, correct errors and make sure it gets more clear for you.</p>
+            </div>
           </div>
         </div>
 
+        <!-- Record Yourself Option -->
+        <div class="equalSizeContainer">
+          <div class="optionContainer animate__animated animate__backInLeft" id="recordOption">
+            <div class="imageContainer">
+              <img src="../img/teachToOthersImg2.webp" alt="Person recording themselves" class="imageSize">
+            </div>
+            <div class="textContainer">
+              <h2 class="adaptativeTitleH2">Record yourself</h2>
+              <p class="adaptativeText">Explain with your own words what you understood based on what you know so far.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Share Knowledge Option -->
         <div class="equalSizeContainer">
           <div class="optionContainer animate__animated animate__backInLeft">
             <div class="imageContainer">
-              <img src="../img/teachToOthersImg2.webp" alt="..." class="imageSize">
+              <img src="../img/teachToOthersImg3.webp" alt="People sharing knowledge" class="imageSize">
             </div>
-              <div class="textContainer">
-                  <h2 class="adaptativeTitleH2">Record yourself</h2>
-                  <p class="adaptativeText">Explain with your own words what you understood based on what you know so far.</p>
-              </div>
+            <div class="textContainer">
+              <h2 class="adaptativeTitleH2">Share what you learned</h2>
+              <p class="adaptativeText">According to experts, the best way to learn something is by teaching.</p>
+            </div>
           </div>
         </div>
-  
-        <div class="equalSizeContainer">
-          <div>
-            <div class="optionContainer animate__animated animate__backInLeft">
-              <div class="imageContainer">
-                <img src="../img/teachToOthersImg3.webp" alt="..." class="imageSize">
-              </div>
-                <div class="textContainer">
-                    <h2 class="adaptativeTitleH2">Share what you learned</h2>
-                    <p class="adaptativeText">According to experts, the best way to learn something is by teaching.</p>
-                </div>
+      </div>
+
+      <!-- Recording Section (initially hidden) -->
+      <div id="recordingSection" style="display: none;" class="container p-4">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Recording Live...</h4>
+            <div class="mb-3">
+              <video id="livePreview" class="w-100" style="max-width: 480px;" autoplay muted playsinline></video>
+            </div>
+            <div class="mb-3">
+              <button class="btn btn-danger" id="stopRecordBtn">Stop Recording</button>
+            </div>
+            <h4 class="card-title">Playback</h4>
+            <div class="mb-3">
+              <video id="recordedPlayback" class="w-100" style="max-width: 480px; display: none;" controls></video>
+            </div>
+            <div class="d-flex gap-2">
+              <a id="downloadLink" class="btn btn-success" style="display: none;" href="#">Download Recording</a>
+              <button class="btn btn-secondary" id="finishRecordingBtn" style="display: none;">Back to Options</button>
             </div>
           </div>
         </div>
@@ -86,7 +110,8 @@
     </main>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/learnTeaching.js"></script>
 
 
   </body>
