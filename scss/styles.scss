@@ -226,6 +226,148 @@ $colors: (
   }
 }
 
+/* Learn Teaching Styles */
+.container-learnTeaching {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.equalSizeContainer {
+  min-height: 400px;
+  padding: 1rem;
+}
+
+.optionContainer {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(10px);
+  
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.imageContainer {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  
+  .imageSize {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.textContainer {
+  padding: 1.5rem;
+  
+  .adaptativeTitleH2 {
+    color: map-get($colors, 'titles');
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  
+  .adaptativeText {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+
+.mainBottomMargin {
+  margin-bottom: 3rem;
+}
+
+/* Flashcards Styles */
+.flashcardsButtonsContainer {
+  @include flex-center;
+  margin-top: 2rem;
+  
+  .btn-group {
+    background: map-get($colors, 'card-bg');
+    padding: 0.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    
+    .btn {
+      background-color: transparent;
+      border: none;
+      color: map-get($colors, 'titles');
+      font-weight: 600;
+      padding: 0.8rem 1.5rem;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background-color: map-get($colors, 'header');
+        color: white;
+        transform: translateY(-2px);
+      }
+      
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+.flashcardsDecksContainer {
+  background: map-get($colors, 'card-bg');
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  
+  .row {
+    padding: 1rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    
+    &:not(:first-child):hover {
+      background: rgba(255, 255, 255, 0.5);
+      transform: translateX(10px);
+    }
+  }
+  
+  .flashcardsColumnsTitlesBox {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+  }
+  
+  .flashcardsColumnsTitles {
+    color: map-get($colors, 'titles');
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  
+  .col {
+    @include flex-center;
+    padding: 0.5rem;
+    color: #666;
+  }
+}
+
+.flashcardsButtonsContainer2 {
+  @extend .flashcardsButtonsContainer;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 /* Animations */
 @keyframes rotation-efect {
   from { transform: rotate(0deg); }
@@ -304,6 +446,66 @@ $colors: (
   .headerBootstrap .navbar {
     padding: 0.5rem 1rem;
   }
+
+  .container-learnTeaching {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  
+  .equalSizeContainer {
+    min-height: 350px;
+  }
+  
+  .imageContainer {
+    height: 200px;
+  }
+  
+  .textContainer {
+    padding: 1rem;
+    
+    .adaptativeTitleH2 {
+      font-size: 1.2rem;
+    }
+    
+    .adaptativeText {
+      font-size: 0.9rem;
+    }
+  }
+
+  .flashcardsButtonsContainer,
+  .flashcardsButtonsContainer2 {
+    .btn-group {
+      flex-direction: column;
+      width: 90%;
+      
+      .btn {
+        width: 100%;
+        margin: 0.25rem 0;
+        border-radius: 10px;
+        
+        &:not(:last-child) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  
+  .flashcardsDecksContainer {
+    padding: 1rem;
+    margin: 1rem;
+    
+    .row {
+      padding: 0.5rem;
+    }
+    
+    .flashcardsColumnsTitles {
+      font-size: 0.9rem;
+    }
+    
+    .col {
+      font-size: 0.8rem;
+    }
+  }
 }
 
 @media screen and (min-width: 1600px) {
@@ -312,5 +514,29 @@ $colors: (
   }
   .adaptativeTitleH2 {
     font-size: 3rem;
+  }
+
+  .container-learnTeaching {
+    max-width: 1800px;
+  }
+  
+  .equalSizeContainer {
+    min-height: 500px;
+  }
+  
+  .imageContainer {
+    height: 300px;
+  }
+
+  .flashcardsDecksContainer {
+    max-width: 1400px;
+    
+    .flashcardsColumnsTitles {
+      font-size: 1.3rem;
+    }
+    
+    .col {
+      font-size: 1.1rem;
+    }
   }
 }

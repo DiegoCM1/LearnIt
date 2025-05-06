@@ -187,6 +187,137 @@
   transform: translateY(0);
 }
 
+/* Learn Teaching Styles */
+.container-learnTeaching {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.equalSizeContainer {
+  min-height: 400px;
+  padding: 1rem;
+}
+
+.optionContainer {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+.optionContainer:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.imageContainer {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+.imageContainer .imageSize {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.imageContainer .imageSize:hover {
+  transform: scale(1.05);
+}
+
+.textContainer {
+  padding: 1.5rem;
+}
+.textContainer .adaptativeTitleH2 {
+  color: rgb(64, 64, 149);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.textContainer .adaptativeText {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.mainBottomMargin {
+  margin-bottom: 3rem;
+}
+
+/* Flashcards Styles */
+.flashcardsButtonsContainer, .flashcardsButtonsContainer2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.flashcardsButtonsContainer .btn-group, .flashcardsButtonsContainer2 .btn-group {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.flashcardsButtonsContainer .btn-group .btn, .flashcardsButtonsContainer2 .btn-group .btn {
+  background-color: transparent;
+  border: none;
+  color: rgb(64, 64, 149);
+  font-weight: 600;
+  padding: 0.8rem 1.5rem;
+  transition: all 0.3s ease;
+}
+.flashcardsButtonsContainer .btn-group .btn:hover, .flashcardsButtonsContainer2 .btn-group .btn:hover {
+  background-color: rgb(22, 145, 167);
+  color: white;
+  transform: translateY(-2px);
+}
+.flashcardsButtonsContainer .btn-group .btn:not(:last-child), .flashcardsButtonsContainer2 .btn-group .btn:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.flashcardsDecksContainer {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+.flashcardsDecksContainer .row {
+  padding: 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.flashcardsDecksContainer .row:not(:first-child):hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: translateX(10px);
+}
+.flashcardsDecksContainer .flashcardsColumnsTitlesBox {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+.flashcardsDecksContainer .flashcardsColumnsTitles {
+  color: rgb(64, 64, 149);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.flashcardsDecksContainer .col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  color: #666;
+}
+
+.flashcardsButtonsContainer2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 /* Animations */
 @keyframes rotation-efect {
   from {
@@ -263,6 +394,53 @@
   .headerBootstrap .navbar {
     padding: 0.5rem 1rem;
   }
+  .container-learnTeaching {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  .equalSizeContainer {
+    min-height: 350px;
+  }
+  .imageContainer {
+    height: 200px;
+  }
+  .textContainer {
+    padding: 1rem;
+  }
+  .textContainer .adaptativeTitleH2 {
+    font-size: 1.2rem;
+  }
+  .textContainer .adaptativeText {
+    font-size: 0.9rem;
+  }
+  .flashcardsButtonsContainer .btn-group,
+  .flashcardsButtonsContainer2 .btn-group {
+    flex-direction: column;
+    width: 90%;
+  }
+  .flashcardsButtonsContainer .btn-group .btn,
+  .flashcardsButtonsContainer2 .btn-group .btn {
+    width: 100%;
+    margin: 0.25rem 0;
+    border-radius: 10px;
+  }
+  .flashcardsButtonsContainer .btn-group .btn:not(:last-child),
+  .flashcardsButtonsContainer2 .btn-group .btn:not(:last-child) {
+    margin-right: 0;
+  }
+  .flashcardsDecksContainer {
+    padding: 1rem;
+    margin: 1rem;
+  }
+  .flashcardsDecksContainer .row {
+    padding: 0.5rem;
+  }
+  .flashcardsDecksContainer .flashcardsColumnsTitles {
+    font-size: 0.9rem;
+  }
+  .flashcardsDecksContainer .col {
+    font-size: 0.8rem;
+  }
 }
 @media screen and (min-width: 1600px) {
   .adaptativeText {
@@ -270,6 +448,24 @@
   }
   .adaptativeTitleH2 {
     font-size: 3rem;
+  }
+  .container-learnTeaching {
+    max-width: 1800px;
+  }
+  .equalSizeContainer {
+    min-height: 500px;
+  }
+  .imageContainer {
+    height: 300px;
+  }
+  .flashcardsDecksContainer {
+    max-width: 1400px;
+  }
+  .flashcardsDecksContainer .flashcardsColumnsTitles {
+    font-size: 1.3rem;
+  }
+  .flashcardsDecksContainer .col {
+    font-size: 1.1rem;
   }
 }
 

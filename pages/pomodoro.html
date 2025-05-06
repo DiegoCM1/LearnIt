@@ -2,78 +2,87 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Unlock the power of the Pomodoro technique with our specialized tool. Enhance your productivity and focus through structured work and break cycles. Improve concentration, manage time effectively, and experience heightened efficiency in your daily tasks. Transform your routine with the Pomodoro technique and make the most of every minute with our intuitive and user-friendly tool!">
-    <meta name="keywords" content="Pomodoro technique, productivity tool, time management, focus, work cycles, break cycles">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet"> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    
-    <link rel="stylesheet" href="../css/styles.css"> 
-    
-    <title>LearnIt - Pomodoro - Boost Your Productivity</title> </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Unlock the power of the Pomodoro technique with our specialized tool. Enhance your productivity and focus through structured work and break cycles. Improve concentration, manage time effectively, and experience heightened efficiency in your daily tasks. Transform your routine with the Pomodoro technique and make the most of every minute with our intuitive and user-friendly tool!">
+  <meta name="keywords"
+    content="Pomodoro technique, productivity tool, time management, focus, work cycles, break cycles">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <title>LearnIt - Pomodoro - Boost Your Productivity</title>
+</head>
 
 <body class="body-bg">
 
-    <header class="headerBootstrap">
-      <nav class="navbar navbar-expand-lg"> <div class="container-fluid">
-          <a class="navbar-brand" href="../index.html">LearnIt</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../pages/pomodoro.html">Pomodoro</a> 
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../pages/learnTeaching.html">Learn Teaching</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../pages/flashcards.html">Flashcards</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../pages/artificialIntelligence.html">AI</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../pages/settings.html">Settings</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../pages/contact.html">Contact</a>
-              </li>
-            </ul>
+  <header class="headerBootstrap">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">LearnIt</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../pages/pomodoro.html">Pomodoro</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/learnTeaching.html">Learn Teaching</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/flashcards.html">Flashcards</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/settings.html">Settings</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="container mt-2">
+      <div class="row justify-content-center">
+        <div class="col-md-12">
+          <div class="text-center pomodoro-card">
+            <div class="newPomodoroImgBox">
+              <img src="../img/pomodoroSystem.webp" alt="Red pomodoro timer illustration"
+                class="animate__animated animate__backInDown newPomodoroImg">
+            </div>
+
+            <div class="display-4 animate__animated animate__shakeY" id="timer">25:00</div>
+
+            <div class="newPomodoroButtons">
+              <button class="btn btn-success animate__animated animate__backInDown" id="startButton"
+                onclick="startTimer()">Start</button>
+              <button class="btn btn-success animate__animated animate__backInUp" id="breakButton">Break</button>
+              <button class="btn btn-success animate__animated animate__backInDown" id="stopButton"
+                onclick="stopTimer()">Stop</button>
+            </div>
           </div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </div>
 
-    <main>
+  </main>
 
-        <div class="container mt-2">
-            <div class="row justify-content-center">
-                <div class="col-md-12"> 
-                    <div class="text-center pomodoro-card"> 
-                        <div class="newPomodoroImgBox">
-                            <img src="../img/pomodoroSystem.webp" alt="Red pomodoro timer illustration" class="animate__animated animate__backInDown newPomodoroImg">
-                        </div>
-                        
-                        <div class="display-4 animate__animated animate__shakeY" id="timer">25:00</div> 
-                        
-                        <div class="newPomodoroButtons">
-                            <button class="btn btn-success animate__animated animate__backInDown" id="startButton" onclick="startTimer()">Start</button>
-                            <button class="btn btn-success animate__animated animate__backInUp" id="breakButton">Break</button> <button class="btn btn-success animate__animated animate__backInDown" id="stopButton" onclick="stopTimer()">Stop</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 
-    </main>
+</body>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    
-    </body>
 </html>
