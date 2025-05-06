@@ -2,7 +2,11 @@
 $colors: (
   'bg': rgb(158, 239, 243),
   'header': rgb(22, 145, 167),
-  'titles': rgb(64, 64, 149)
+  'titles': rgb(64, 64, 149),
+  'timer': #2c3e50,
+  'button-primary': #27ae60,
+  'button-hover': #219a52,
+  'card-bg': rgba(255, 255, 255, 0.95)
 );
 
 /* Mixins */
@@ -62,6 +66,40 @@ $colors: (
       
       &:hover {
         transform: scale(1.1);
+      }
+    }
+  }
+}
+
+/* Navbar Styles */
+.headerBootstrap {
+  background-color: map-get($colors, 'header');
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  .navbar {
+    padding: 1rem 2rem;
+
+    .navbar-brand {
+      color: white;
+      font-size: 1.8rem;
+      font-weight: 700;
+      
+      &:hover {
+        color: darken(white, 10%);
+      }
+    }
+
+    .nav-link {
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 400;
+      padding: 0.5rem 1rem;
+      margin: 0 0.2rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+
+      &:hover, &.active {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: white;
       }
     }
   }
@@ -128,8 +166,65 @@ $colors: (
   }
 }
 
+/* Pomodoro Styles */
+.pomodoro-card {
+  background: map-get($colors, 'card-bg');
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  backdrop-filter: blur(10px);
 
+  .newPomodoroImgBox {
+    margin-bottom: 2rem;
 
+    .newPomodoroImg {
+      max-width: 200px;
+      height: auto;
+      filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+    }
+  }
+
+  #timer {
+    font-size: 5rem;
+    font-weight: 700;
+    color: map-get($colors, 'timer');
+    margin: 2rem 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .newPomodoroButtons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+
+    .btn {
+      padding: 0.8rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 50px;
+      border: none;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      
+      &.btn-success {
+        background-color: map-get($colors, 'button-primary');
+        
+        &:hover {
+          background-color: map-get($colors, 'button-hover');
+          transform: translateY(-2px);
+          box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+        }
+
+        &:active {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}
 
 /* Animations */
 @keyframes rotation-efect {
@@ -184,6 +279,30 @@ $colors: (
   
   .mainMenuImages {
     max-width: 250px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pomodoro-card {
+    padding: 1.5rem;
+    margin: 1rem;
+
+    #timer {
+      font-size: 3.5rem;
+    }
+
+    .newPomodoroButtons {
+      flex-direction: column;
+      
+      .btn {
+        width: 100%;
+        margin: 0.5rem 0;
+      }
+    }
+  }
+
+  .headerBootstrap .navbar {
+    padding: 0.5rem 1rem;
   }
 }
 

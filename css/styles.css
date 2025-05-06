@@ -43,6 +43,35 @@
   transform: scale(1.1);
 }
 
+/* Navbar Styles */
+.headerBootstrap {
+  background-color: rgb(22, 145, 167);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.headerBootstrap .navbar {
+  padding: 1rem 2rem;
+}
+.headerBootstrap .navbar .navbar-brand {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.headerBootstrap .navbar .navbar-brand:hover {
+  color: rgb(229.5, 229.5, 229.5);
+}
+.headerBootstrap .navbar .nav-link {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+  padding: 0.5rem 1rem;
+  margin: 0 0.2rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.headerBootstrap .navbar .nav-link:hover, .headerBootstrap .navbar .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
 /* Main Content */
 .title-h1 {
   color: white;
@@ -106,6 +135,58 @@
   }
 }
 
+/* Pomodoro Styles */
+.pomodoro-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  backdrop-filter: blur(10px);
+}
+.pomodoro-card .newPomodoroImgBox {
+  margin-bottom: 2rem;
+}
+.pomodoro-card .newPomodoroImgBox .newPomodoroImg {
+  max-width: 200px;
+  height: auto;
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+}
+.pomodoro-card #timer {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 2rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.pomodoro-card .newPomodoroButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.pomodoro-card .newPomodoroButtons .btn {
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  border: none;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.pomodoro-card .newPomodoroButtons .btn.btn-success {
+  background-color: #27ae60;
+}
+.pomodoro-card .newPomodoroButtons .btn.btn-success:hover {
+  background-color: #219a52;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+}
+.pomodoro-card .newPomodoroButtons .btn.btn-success:active {
+  transform: translateY(0);
+}
+
 /* Animations */
 @keyframes rotation-efect {
   from {
@@ -162,6 +243,25 @@
   }
   .mainMenuImages {
     max-width: 250px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pomodoro-card {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  .pomodoro-card #timer {
+    font-size: 3.5rem;
+  }
+  .pomodoro-card .newPomodoroButtons {
+    flex-direction: column;
+  }
+  .pomodoro-card .newPomodoroButtons .btn {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  .headerBootstrap .navbar {
+    padding: 0.5rem 1rem;
   }
 }
 @media screen and (min-width: 1600px) {
