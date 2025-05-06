@@ -1,0 +1,1 @@
+const learnTeachingMainOptions = document.getElementById("learnTeachingMainOptions")
